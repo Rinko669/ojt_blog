@@ -1,0 +1,314 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 30px 50px;
+    background-color: #748A98;
+}
+
+.navbar-left span,
+.navbar-right span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.navbar-center ul {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-center ul li {
+    list-style: none;
+}
+
+.navbar-center ul li a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar-center ul li a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: #f33c3c;
+    transition: width 0.3s ease;
+}
+
+.navbar-center ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-icon {
+    font-size: 2rem;
+    color: #000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .navbar-center ul {
+        display: none; /* Initially hide the menu */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 20px;
+    }
+
+    .navbar-center ul.active {
+        display: flex;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+}
+
+
+/*---Blog css --------------*/
+
+#blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.blog-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blog-heading span {
+    color: #f33c3c;
+}
+
+.blog-heading h3 {
+    font-size: 2.4rem;
+    color: #2b2b2b;
+    font-weight: 600;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 boxes per column */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Optional: to limit the width */
+}
+
+.blog-box {
+    background-color: aqua;
+    border: 1px solid #ececec;
+    margin: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for smooth hover effect */
+    border-radius: 20px 20px 20px;
+}
+.blog-box:hover {
+    transform: scale(1.05); /* Enlarges the card slightly */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Adds a shadow effect on hover */
+}
+
+.blog-box:active {
+    transform: scale(1.02); /* Slight reduction in scale for a "click" effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Changes shadow on click */
+}
+
+.blog-text .blog-title:hover {
+    color: #f33c3c;
+    transition: all ease 0.3s;
+}
+/* Container for blog images */
+.blog-img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for all images */
+    overflow: hidden; /* Hide overflow to prevent any image spill */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative; /* For absolute positioning of the image inside */
+}
+
+/* Style for the images inside blog-img */
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    object-position: center; /* Centers the image within the container */
+    display: block; /* Removes extra space below the image */
+}
+
+
+.blog-text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-text span {
+    color: #f33c3c;
+    font-size: 0.9rem;
+}
+
+.blog-text .blog-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #272727;
+}
+
+.blog-text .blog-title:hover {
+    color: #f33c3c;
+    transition: all ease 0.3s;
+}
+
+.blog-text p {
+    color: black;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+
+.blog-box a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.blog-box a button {
+    padding: 10px 20px;
+    background-color: #f33c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.blog-box a button:hover {
+    background-color: #d12d2d;
+    transition: background-color 0.3s ease;
+}
+
+@media(max-width:1250px) {
+    .blog-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 boxes per column */
+    }
+    .blog-box {
+        width: 100%; /* Ensure full width within grid */
+    }
+}
+
+@media(max-width:1100px) {
+    .blog-container {
+        grid-template-columns: 1fr; /* 1 box per column */
+    }
+    .blog-box {
+        width: 100%; /* Ensure full width within grid */
+    }
+}
+
+@media(max-width:550px) {
+    #blog {
+        padding: 20px;
+    }
+}
+/* Pagination Styling */
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.pagination-item {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    padding: 8px 16px;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-item:hover {
+    background-color: #f33c3c;
+    color: #fff;
+}
+
+/*footer */
+.footer {
+  background-color: lightgray; /* Light grey background */
+  color: black; /* Dark grey text */
+  text-align: center; /* Centers the text */
+  padding: 10px 0; /* 20px padding at the top and bottom */
+  margin-top: 40px; /* Adds space between the content and the footer */
+}
+
+.footer a {
+  color: #007bff; /* Bootstrap default link color */
+  text-decoration: none; /* No underline */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+/*ends*/

@@ -1,0 +1,258 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+
+
+
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 30px 50px;
+    background-color: #748A98;
+}
+
+.navbar-left span,
+.navbar-right span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.navbar-center ul {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-center ul li {
+    list-style: none;
+}
+
+.navbar-center ul li a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar-center ul li a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: #f33c3c;
+    transition: width 0.3s ease;
+}
+
+.navbar-center ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-icon {
+    font-size: 2rem;
+    color: #000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .navbar-center ul {
+        display: none; /* Initially hide the menu */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 20px;
+    }
+
+    .navbar-center ul.active {
+        display: flex;
+    }
+}
+
+/* Blog Content Styling */
+.blog-content {
+    text-align: center;
+    padding: 40px;
+    background-color: #f7f7f7;
+}
+
+.blog-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Image Grid */
+.image-grid {
+   display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust column size as needed */
+  gap: 20px; /* Increased gap for visual separation */
+  justify-content: center; /* Ensures the grid itself is centered in the .content div */
+  margin-bottom: 20px;
+}
+
+
+.image-box {
+    overflow: hidden;
+}
+
+/* Initial state for the images before they appear */
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slight downward position */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+}
+
+/* When the page loads, this will trigger the effect */
+.image-box img.appear {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+/* General Styles for Video */
+.image-grid video {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+/* Responsive Design for Video */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* 1 item per row on very small screens */
+    }
+}
+
+
+/* Paragraph Box */
+.paragraph-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Adjusted to be more responsive */
+    margin: 20px auto;
+}
+
+.paragraph-box p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444; /* Slightly darker color for better contrast */
+    margin-bottom: 20px;
+}
+
+.paragraph-box ul {
+    margin: 20px 0;
+    padding-left: 20px;
+    line-height: 1.8; /* Matches the line height of paragraphs */
+}
+
+.paragraph-box li {
+    font-size: 1.1rem;
+    margin-bottom: 15px; /* Increased spacing for better readability */
+    list-style-position: inside; /* Moves the bullet point inside, closer to the text */
+}
+
+.paragraph-box h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #222; /* Slightly darker heading for emphasis */
+    margin-bottom: 15px; /* Adjusted margin for consistency */
+}
+
+/* Style for any span inside the paragraph-box */
+.paragraph-box p span {
+    color: #f33c3c; /* Add your preferred color */
+    font-weight: bold;
+}
+
+/* Media Queries for better responsiveness */
+@media (max-width: 768px) {
+    .paragraph-box {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .paragraph-box p,
+    .paragraph-box li,
+    .paragraph-box h3 {
+        font-size: 1rem; /* Adjusted font size for smaller screens */
+    }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* 1 image per row on very small screens */
+    }
+}
+
+/*footer */
+.footer {
+  background-color: lightgray; /* Light grey background */
+  color: black; /* Dark grey text */
+  text-align: center; /* Centers the text */
+  padding: 10px 0; /* 20px padding at the top and bottom */
+  margin-top: 40px; /* Adds space between the content and the footer */
+}
+
+.footer a {
+  color: #007bff; /* Bootstrap default link color */
+  text-decoration: none; /* No underline */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+/*ends*/

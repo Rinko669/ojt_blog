@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OJT BLOGS</title>
+</head>
+
+<!--Links-->
+<link rel="shortcut icon" type="image/png" href="ojt.png"/>
+<link rel="stylesheet" href="index.css">
+
+<!---
+<script src="index.js"></script>
+ <script src="registerServiceWorker.js"></script>
+ -->
+
+<body>
+    <!-- Pre-loader -->
+    <div class="preloader">
+        <img src="./photos/suisei-hoshimachi-unscreen.gif" alt="Loading...">
+    </div>
+
+    <!-- Warning Notification -->
+    <div id="warningModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="warning-notification">'
+                <p class="note"> TAKE NOTE!!!!!</p>
+                <img src="./photos/Minori_Portrait.webp" alt="Warning" style="width:80px; height: auto;">
+                <div class="warning-text-container">
+                    <p>This website is still in development, so it is not responsive yet. Please use desktop mode for a
+                        better viewing experience. Thank you.</p>
+                    <button class="close-warning">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--navbar starts-->
+    <header class="header">
+        <a href="#" class="name">Ian Chester Bufete</a>
+
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="more.html">More</a>
+        </nav>
+        <a href="#" class="name">OJT BLOGS</a>
+            
+    </header>
+    <!--navbar ends-->
+
+    <section class="home" id="home">
+        <div class="home-text">
+            <h3>
+                Hello I'm
+            </h3>
+            <h1> Ian Chester Bufete</h1>
+            <h5>BSIT Student of Bicol University</h5>
+            <p>This website is intended for educational purposes only, I created this in order to show or put a records
+                of my daily blogs for my
+                On-Job-Training for 486 hours..
+            </p>
+
+        </div>
+        <!--img section start-->
+        <div class="home-img">
+            <img id="imageToChange" class="active h-[500px] aos-init aos-animate" src="./photos/hanako.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="section2" id="section2">
+
+        <div>
+            <H5>Introduction</H5>
+            <div class="subsection">
+                <div class="text">
+                    <p class="intro-title">Introduction</p>
+                    <p>I'm a candidate for graduating student and OJT or On-the-Job-Training is our final subject for
+                        4th year and this is where we being prepared or have some experience on the real world</p>
+                </div>
+                <div class="image">
+                    <img src="./photos/orient.jpg" alt="Visual representation of OJT">
+                </div>
+            </div>
+
+            <div class="subsection">
+                <div class="image">
+                    <!-- Replace 'image2.jpg' with the path to your image -->
+                    <img src="./photos/52-Blog.avif" alt="Another visual representation of OJT">
+                </div>
+                <div class="text text-right">
+                    <p class="intro-title">What is blog?</p>
+                    <p>A blog is a type of website or part of a website that features written content, known as blog
+                        posts or entries. Originally a combination of the words "web log," blogs started primarily as
+                        personal online journals where individuals could express their thoughts, experiences, and
+                        interests. </p>
+                </div>
+            </div>
+            <div class="subsection">
+                <div class="text">
+                    <p class="intro-title">What is Ojt</p>
+                    <p>
+                        On-the-Job Training (OJT) refers to the method of providing practical and hands-on training to
+                        employees while they are performing their actual job tasks. </p>
+                </div>
+                <div class="image">
+                    <img src="./photos/On-the-job-training-1.webp" alt="Visual representation of OJT">
+                </div>
+            </div>
+            <div class="subsection">
+                <div class="image">
+                    <!-- Replace 'image2.jpg' with the path to your image -->
+                    <img src="./photos/think.png" alt="Another visual representation of OJT">
+                </div>
+                <div class="text text-right">
+                    <p class="intro-title">What to expect?</p>
+                    <p>I'll expect that I will learn and enhance my knowledge that will helps me to be prepared for my
+                        future.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--section 2 end-->
+
+    <!--section 3 start-->
+    <section class="library-deployment">
+        <h5>I WAS DEPLOYED IN UNIVERSITY LIBRARY</h5>
+        <div class="images">
+            <img src="./photos/dryrun.jpg" alt="Image description 1">
+            <img src="./photos/orient.jpg" alt="Image description 2">
+            <img src="./photos/feb14_1.JPG" alt="Image description 3">
+        </div>
+        <p>The image from above is where our orientation happened and discuss to us on where we are going to be deployed
+            and what task will be given to us, and we had some dry run through the afternoon.</p>
+    </section>
+    <!--section 3 end-->
+
+    <!-- Footer starts -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 OJT BLOGS BUFETE | All rights reserved.</p>
+            <p>Contact information: <a href="#">imailisa10@gmail.com</a>.</p>
+        </div>
+    </footer>
+    <!-- Footer ends -->
+
+<!--script areas-->
+
+    <script>
+        window.addEventListener('load', function () {
+            // Delay in milliseconds
+            const delay = 3000; // 3 second
+
+            setTimeout(function () {
+                const preloader = document.querySelector('.preloader');
+                preloader.style.display = 'none';
+            }, delay);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navbar = document.querySelector('.navbar');
+
+            navToggle.addEventListener('click', function () {
+                navbar.classList.toggle('active');
+                navToggle.classList.toggle('is-active'); // For visual feedback
+            });
+        });
+    </script>
+
+    <script>window.addEventListener('load', function () {
+            const delay = 3000; // 3 seconds
+
+            setTimeout(function () {
+                const preloader = document.querySelector('.preloader');
+                preloader.style.display = 'none';
+
+                // Show the warning notification after the preloader is hidden
+                const warningNotification = document.querySelector('.warning-notification');
+                warningNotification.style.display = 'block';
+                setTimeout(() => { warningNotification.style.opacity = '1'; }, 100); // Fade in effect
+            }, delay);
+
+            // Hide the warning notification when "OK" is clicked
+            const closeWarningBtn = document.querySelector('.close-warning');
+            closeWarningBtn.addEventListener('click', function () {
+                const warningNotification = document.querySelector('.warning-notification');
+                warningNotification.style.display = 'none';
+            });
+        });
+    </script>
+    <script>
+        // Array of image sources
+        var imageSources = [
+            "./photos/hanako.jpg",
+            "./photos/Minori_Portrait.webp",
+            "./photos/fixing_pc.jpg",
+            "./photos/feb7_2.jpg",
+              "./photos/feb12_2.jpg"
+            // Add more image sources as needed
+        ];
+
+        var currentImageIndex = 0;
+        var imageElement = document.getElementById("imageToChange");
+
+        // Function to change the image
+        function changeImage() {
+            // Update the image source
+            imageElement.src = imageSources[currentImageIndex];
+
+            // Increment the index for the next image
+            currentImageIndex = (currentImageIndex + 1) % imageSources.length;
+        }
+
+        // Set interval to change image every 5 seconds (5000 milliseconds)
+        setInterval(changeImage, 3000);
+
+        function updateTime() {
+  var now = new Date();
+  var datetimeElement = document.getElementById('datetime');
+  var dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  var timeOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+  var dateString = now.toLocaleDateString('en-US', dateOptions);
+  var timeString = now.toLocaleTimeString('en-US', timeOptions);
+  datetimeElement.innerHTML = dateString + ' ' + timeString;
+}
+
+// Update time initially
+updateTime();
+
+// Update time every second
+setInterval(updateTime, 1000);
+    </script>
+
+</body>
+
+</html>

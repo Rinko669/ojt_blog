@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEBRUARY BLOGS</title>
+
+    <!--Links-->
+    <link rel="shortcut icon" type="image/png" href="../ojt.png" />
+    <link rel="stylesheet" href="../feb.css">
+
+    <!--Poppins Links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <span>Ian Chester Bufete</span>
+        </div>
+        <div class="navbar-center">
+            <ul class="navbar-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../blogs.html">Blogs</a></li>
+                <li><a href="../more.html">More</a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <span>OJT BLOGS</span>
+        </div>
+
+        <!-- Hamburger menu for mobile view -->
+        <div class="hamburger-menu">
+            <span class="hamburger-icon">&#9776;</span>
+        </div>
+    </nav>
+    <!--navbar ends-->
+    <section class="blog-content">
+        <h2>FEBRUARY 8, 2024</h2>
+        <div class="image-grid">
+            <video controls>
+                <source src="../feb8.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="image-box">
+                <img src="../photos/feb8_long2 (2).jpg" alt="Image 4 description">
+            </div>
+            <div class="image-box">
+                <img src="../photos/feb8_long2 (3).jpg" alt="Image 2 description">
+            </div>
+
+        </div>
+
+
+        <div class="paragraph-box">
+            <div class="paragraph">
+                <p>On this day, <span>February 8</span>, we picked up right where we left off from the previous day.
+                    After logging in, we were promptly assigned tasks to get started on our day in the office..</p>
+
+                <h3>Here are some tasks I completed:</h3>
+                <ul>
+                    <li><b>Continued Thesis Scanning:</b> We proceeded with scanning the theses that were assigned to us. This
+                        task required careful attention to detail to ensure that all pages were captured accurately.
+                    </li>
+                    <li><b>Content Creation Assistance:</b> I assisted in the content creation for our project output. This
+                        involved brainstorming ideas and helping draft content that aligns with our objectives.</li>
+                    <li><b>Technical:</b> Fixed some extension wires for future use</li>
+                </ul>
+
+                <p>It was our second day and we continue to scan thesis book because that were the task given to us</p>
+            </div>
+
+    </section>
+    <!-- Footer starts -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 OJT BLOGS BUFETE | All rights reserved.</p>
+            <p>Contact information: <a href="#">imailisa10@gmail.com</a>.</p>
+        </div>
+    </footer>
+    <!-- Footer ends -->
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger-icon');
+        const navLinks = document.querySelector('.navbar-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+    <script src="../blog.js"></script>
+</body>
+
+</html>
