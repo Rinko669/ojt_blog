@@ -150,14 +150,22 @@ body {
     width: 100%;
     max-width: 1200px; /* Optional: to limit the width */
 }
-
 .blog-box {
     background-color: aqua;
     border: 1px solid #ececec;
     margin: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for smooth hover effect */
     border-radius: 20px 20px 20px;
+    opacity: 0; /* Initially invisible */
+    transform: translateY(20px); /* Start with a slight vertical offset */
+    transition: all 0.5s ease-in-out;
 }
+
+.blog-box.visible {
+    opacity: 1; /* Make the box visible */
+    transform: translateY(0); /* Remove the vertical offset */
+}
+
 .blog-box:hover {
     transform: scale(1.05); /* Enlarges the card slightly */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Adds a shadow effect on hover */
@@ -270,6 +278,7 @@ body {
         padding: 20px;
     }
 }
+
 /* Pagination Styling */
 .pagination {
     margin-top: 20px;
@@ -293,6 +302,30 @@ body {
     background-color: #f33c3c;
     color: #fff;
 }
+
+.blog-month-content {
+    display: none; /* Hide all content by default */
+}
+
+.blog-month-content.active {
+    display: block; /* Show content when active */
+}
+
+.pagination-item {
+    cursor: pointer; /* Ensure the pagination items look clickable */
+    padding: 10px; /* Adjust padding as needed */
+    color: black; /* Default text color */
+    text-decoration: none; /* Remove underline from links if using anchor tags */
+    margin-bottom: 20px;
+}
+
+.pagination-item.active {
+    color: white; /* Text color for active item */
+    background-color: #f33c3c; /* Background color for active item */
+    border-radius: 5px; /* Optional: rounded corners */
+    font-weight: bold; /* Optional: make the text bold */
+}
+
 
 /*footer */
 .footer {
