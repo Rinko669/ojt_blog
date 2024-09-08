@@ -8,7 +8,7 @@
 </head>
 
 <!--Links-->
-<link rel="shortcut icon" type="image/png" href="ojt.png"/>
+<link rel="shortcut icon" type="image/png" href="ojt.png" />
 <link rel="stylesheet" href="index.css">
 
 <!---
@@ -25,7 +25,6 @@
     <!-- Warning Notification -->
     <div id="warningModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
             <div class="warning-notification">'
                 <p class="note"> TAKE NOTE!!!!!</p>
                 <img src="./photos/Minori_Portrait.webp" alt="Warning" style="width:80px; height: auto;">
@@ -39,22 +38,27 @@
     </div>
 
 
-    <!--navbar starts-->
-    <header class="header">
-        <a href="#" class="name">Ian Chester Bufete</a>
 
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-        </button>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <span>Ian Chester Bufete</span>
+        </div>
+        <div class="navbar-center">
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="more.html">More</a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <span>OJT BLOGS</span>
+        </div>
 
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="blogs.html">Blogs</a>
-            <a href="more.html">More</a>
-        </nav>
-        <a href="#" class="name">OJT BLOGS</a>
-            
-    </header>
+        <!-- Hamburger menu for mobile view -->
+        <div class="hamburger-menu">
+            <span class="hamburger-icon">&#9776;</span>
+        </div>
+    </nav>
     <!--navbar ends-->
 
     <section class="home" id="home">
@@ -68,7 +72,6 @@
                 of my daily blogs for my
                 On-Job-Training for 486 hours..
             </p>
-
         </div>
         <!--img section start-->
         <div class="home-img">
@@ -152,32 +155,21 @@
     </footer>
     <!-- Footer ends -->
 
-<!--script areas-->
+    <!--script areas-->
+
+    <script>
+        const hamburger = document.querySelector('.hamburger-icon');
+        const navLinks = document.querySelector('.navbar-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+
 
     <script>
         window.addEventListener('load', function () {
-            // Delay in milliseconds
-            const delay = 3000; // 3 second
-
-            setTimeout(function () {
-                const preloader = document.querySelector('.preloader');
-                preloader.style.display = 'none';
-            }, delay);
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navToggle = document.querySelector('.nav-toggle');
-            const navbar = document.querySelector('.navbar');
-
-            navToggle.addEventListener('click', function () {
-                navbar.classList.toggle('active');
-                navToggle.classList.toggle('is-active'); // For visual feedback
-            });
-        });
-    </script>
-
-    <script>window.addEventListener('load', function () {
             const delay = 3000; // 3 seconds
 
             setTimeout(function () {
@@ -198,6 +190,7 @@
             });
         });
     </script>
+
     <script>
         // Array of image sources
         var imageSources = [
@@ -205,7 +198,7 @@
             "./photos/Minori_Portrait.webp",
             "./photos/fixing_pc.jpg",
             "./photos/feb7_2.jpg",
-              "./photos/feb12_2.jpg"
+            "./photos/feb12_2.jpg"
             // Add more image sources as needed
         ];
 
@@ -225,20 +218,20 @@
         setInterval(changeImage, 3000);
 
         function updateTime() {
-  var now = new Date();
-  var datetimeElement = document.getElementById('datetime');
-  var dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  var timeOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
-  var dateString = now.toLocaleDateString('en-US', dateOptions);
-  var timeString = now.toLocaleTimeString('en-US', timeOptions);
-  datetimeElement.innerHTML = dateString + ' ' + timeString;
-}
+            var now = new Date();
+            var datetimeElement = document.getElementById('datetime');
+            var dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var timeOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+            var dateString = now.toLocaleDateString('en-US', dateOptions);
+            var timeString = now.toLocaleTimeString('en-US', timeOptions);
+            datetimeElement.innerHTML = dateString + ' ' + timeString;
+        }
 
-// Update time initially
-updateTime();
+        // Update time initially
+        updateTime();
 
-// Update time every second
-setInterval(updateTime, 1000);
+        // Update time every second
+        setInterval(updateTime, 1000);
 
     </script>
 
