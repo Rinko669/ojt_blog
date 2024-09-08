@@ -5,6 +5,25 @@
     box-sizing: border-box;
 }
 
+/* Custom Scrollbar */
+*::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+*::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(173, 216, 230, 0.8), rgba(238, 130, 238, 0.8), rgba(255, 255, 0, 0.8)); /* Light blue, violet, yellow gradient */
+    border-radius: 6px; /* Rounded corners */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(173, 216, 230, 1), rgba(238, 130, 238, 1), rgba(255, 255, 0, 1)); /* Darken on hover */
+}
+
+*::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1); /* Light track background */
+}
+
+
 /* General Navbar Styles */
 .navbar {
     display: flex;
@@ -112,6 +131,7 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: poppins;
+    background-color: burlywood;
 }
 
 
@@ -146,12 +166,12 @@ body {
 .blog-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 boxes per column */
-    gap: 15px;
+    gap: 10px;
     width: 100%;
     max-width: 1200px; /* Optional: to limit the width */
 }
 .blog-box {
-    background-color: aqua;
+    background-color: antiquewhite;
     border: 1px solid #ececec;
     margin: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for smooth hover effect */
@@ -290,7 +310,7 @@ body {
 .pagination-item {
     font-size: 1rem;
     font-weight: 500;
-    color: #000;
+    color: white;
     padding: 8px 16px;
     cursor: pointer;
     border: 1px solid #000;
